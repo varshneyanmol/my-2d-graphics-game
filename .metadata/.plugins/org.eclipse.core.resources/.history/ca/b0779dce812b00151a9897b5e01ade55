@@ -1,0 +1,5 @@
+package com.rain.level.tile.spawn_level;
+
+public class SpawnGrassTile {
+
+}

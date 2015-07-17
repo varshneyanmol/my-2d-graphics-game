@@ -1,0 +1,5 @@
+package com.rain.entity.Projectiles;
+
+public class Projectile {
+
+}

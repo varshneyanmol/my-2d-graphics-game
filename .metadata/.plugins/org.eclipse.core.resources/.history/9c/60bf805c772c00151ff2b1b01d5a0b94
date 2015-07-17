@@ -1,0 +1,48 @@
+package com.rain.entity.particle;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.rain.entity.Entity;
+import com.rain.graphics.Screen;
+import com.rain.graphics.Sprite;
+
+public class Particle extends Entity {
+
+	private int life;
+	private Sprite sprite;
+
+	private double xx, yy, xDirection, yDirection;
+
+	public List<Particle> particles = new ArrayList<Particle>();
+
+	public Particle(int x, int y, int life) {
+		this.x = x;
+		this.y = y;
+		this.xx = x;
+		this.yy = y;
+		this.life = life;
+		sprite = Sprite.particle;
+
+		xDirection = random.nextGaussian();
+		yDirection = random.nextGaussian();
+	}
+
+	public Particle(int x, int y, int life, int amount) {
+		this(x, y, life);
+		particles.add(this);
+		for (int i = 0; i < amount - 1; i++) {
+			particles.add(new Particle(x, y, life));
+		}
+
+	}
+
+	public void update() {
+		xx += xDirection;
+		yy += yDirection;
+	}
+
+	public void render(Screen screen) {
+		screen.renderSprite((int) xx, (int) yy, sprite, true);
+	}
+}

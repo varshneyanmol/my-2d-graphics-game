@@ -1,0 +1,22 @@
+package com.rain.level.tile;
+
+import com.rain.graphics.Screen;
+import com.rain.graphics.Sprite;
+
+public class Tile {
+	
+	public int x, y;
+	public Sprite sprite;
+	
+	public Tile(Sprite sprite) {
+		this.sprite = sprite;
+	}
+	
+	public void render(int x, int y, Screen sxreen) {	
+	
+	}
+	
+	public boolean solid() {
+		return false;
+	}
+}

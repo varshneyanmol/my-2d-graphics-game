@@ -1,0 +1,33 @@
+package com.rain.entity.mob;
+
+import com.rain.input.Keyboard;
+
+public class Player extends Mob {
+
+	private Keyboard input;
+
+	public Player(Keyboard input) {
+		this.input = input;
+	}
+
+	public Player(int x, int y, Keyboard input) {
+		this.x = x;
+		this.y = y;
+		this.input = input;
+	}
+
+	public void update() {
+		int xDirection = 0, yDirection = 0;
+
+		if (input.up) yDirection--;
+		if (input.down) yDirection++;
+		if (input.left) xDirection--;
+		if (input.right) xDirection++;
+
+		if (xDirection != 0 || yDirection != 0) move(xDirection, yDirection);
+
+	}
+
+	public void render() {
+	}
+}

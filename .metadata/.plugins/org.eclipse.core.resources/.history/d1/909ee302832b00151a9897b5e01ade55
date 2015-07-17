@@ -1,0 +1,7 @@
+package com.rain.level.tile.spawn_level;
+
+import com.rain.level.tile.Tile;
+
+public class SpawnRockTile extends Tile {
+
+}
