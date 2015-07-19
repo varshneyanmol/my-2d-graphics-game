@@ -81,7 +81,9 @@ public class Level {
 		for (int corner = 0; corner < 4; corner++) {
 			int xt = (x - corner % 2 * size + xOffset) >> 4;
 			int yt = (y - corner / 2 * size + yOffset) >> 4;
-			if (getTile(xt, yt).solid()) solid = true;
+			if (getTile(xt, yt).solid()) {
+				solid = true;
+			}
 		}
 		return solid;
 	}

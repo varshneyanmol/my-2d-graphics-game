@@ -12,6 +12,7 @@ import java.awt.image.DataBufferInt;
 import com.rain.entity.mob.Player;
 import com.rain.graphics.Screen;
 import com.rain.graphics.Sprite;
+import com.rain.graphics.SpriteSheet;
 import com.rain.input.Keyboard;
 import com.rain.input.Mouse;
 import com.rain.level.Level;
@@ -134,6 +135,12 @@ public class Game extends Canvas implements Runnable {
 		int yScroll = player.y - screen.height / 2;
 		level.render(xScroll, yScroll, screen);
 		player.render(screen);
+
+		// screen.renderSheet(0, 0, SpriteSheet.player_down, false);
+		// screen.renderSheet(40, 0, SpriteSheet.player_up, false);
+		// screen.renderSheet(80, 0, SpriteSheet.player_left, false);
+		// screen.renderSheet(200, 0, SpriteSheet.player_right, false);
+
 		for (int i = 0; i < pixels.length; i++) {
 			pixels[i] = screen.pixels[i];
 		}

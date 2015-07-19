@@ -1,0 +1,9 @@
+package com.rain.graphics;
+
+public class AnimatedSprite extends Sprite {
+
+	protected AnimatedSprite(SpriteSheet sheet, int width, int height) {
+		super(sheet, width, height);
+	}
+
+}

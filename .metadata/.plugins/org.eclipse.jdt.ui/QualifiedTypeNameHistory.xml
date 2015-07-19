@@ -13,7 +13,6 @@
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="com.rain.level.RandomLevel"/>
 <fullyQualifiedTypeName name="java.awt.Font"/>
-<fullyQualifiedTypeName name="com.rain.graphics.SpriteSheet"/>
 <fullyQualifiedTypeName name="com.rain.level.SpawnLevel"/>
 <fullyQualifiedTypeName name="com.rain.level.tile.spawn_level.SpawnGrassTile"/>
 <fullyQualifiedTypeName name="com.rain.level.TileCoordinate"/>
@@ -31,4 +30,5 @@
 <fullyQualifiedTypeName name="com.rain.entity.Spawner.Type"/>
 <fullyQualifiedTypeName name="com.rain.entity.particle.Particle"/>
 <fullyQualifiedTypeName name="com.rain.entity.Entity"/>
+<fullyQualifiedTypeName name="com.rain.graphics.SpriteSheet"/>
 </qualifiedTypeNameHistroy>

@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="JavaSE-1.7" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
-	<item value="7" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.last_focus"/>
+	<item value="5" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.last_focus"/>
 	<item value="false" key="org.eclipse.jdt.ui.formatter_page.show_invisible_characters"/>
+	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="297" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_x"/>
 	<item value="30" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_y"/>
-	<item value="19" key="org.eclipse.jdt.uiformatter_page.modify_dialog_tab_page.last_focus_index"/>
+	<item value="2" key="CallHierarchyViewPart.field_mode"/>
+	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
+	<item value="4" key="org.eclipse.jdt.uiformatter_page.modify_dialog_tab_page.last_focus_index"/>
+	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="500" key="CallHierarchyViewPart.ratio1"/>
+	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
+	<item value="500" key="CallHierarchyViewPart.ratio3"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
 	<item value="0" key="org.eclipse.jdt.uiformatter_page.white_space_tab_page.node"/>
 	<item value="1005" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
 	<item value="862" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
+	<item value="0" key="CallHierarchyViewPart.call_mode"/>
 	<item value="1" key="org.eclipse.jdt.uiformatter_page.line_wrapping_tab_page.last_category_index"/>
 	<item value="0" key="org.eclipse.jdt.uiformatter_page.white_space.java_view.inner"/>
 	<item value="filter_imports;" key="filters_last_used"/>
+	<item value="3" key="CallHierarchyViewPart.orientation"/>
 	<item value="0" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
+	<list key="SearchScopeActionGroup.working_set">
+	</list>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
+	<section name="SearchInDialog">
+		<item value="true" key="SearchInProjects"/>
+		<item value="true" key="SearchInAppLibs"/>
+		<item value="true" key="SearchInJRE"/>
+		<item value="true" key="SearchInSources"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
@@ -58,6 +76,8 @@
 			<item value="428" key="DIALOG_X_ORIGIN"/>
 			<item value="110" key="DIALOG_Y_ORIGIN"/>
 		</section>
+	</section>
+	<section name="CallHierarchySearchScope">
 	</section>
 	<section name="RenameInformationPopup">
 	</section>
