@@ -54,7 +54,7 @@ public class Game extends Canvas implements Runnable {
 		level = Level.spawn_level;
 		TileCoordinate playerSpawn = new TileCoordinate(20, 30);
 		player = new Player(playerSpawn.x(), playerSpawn.y(), key);
-		player.init(level);
+		level.addEntity(player);
 
 		Mouse mouse = new Mouse();
 		this.addKeyListener(key);
@@ -131,10 +131,9 @@ public class Game extends Canvas implements Runnable {
 		}
 
 		screen.clear();
-		int xScroll = player.x - screen.width / 2;
-		int yScroll = player.y - screen.height / 2;
-		level.render(xScroll, yScroll, screen);
-		player.render(screen);
+		double xScroll = player.getX() - screen.width / 2;
+		double yScroll = player.getY() - screen.height / 2;
+		level.render((int) xScroll, (int) yScroll, screen);
 
 		// screen.renderSheet(0, 0, SpriteSheet.player_down, false);
 		// screen.renderSheet(40, 0, SpriteSheet.player_up, false);
@@ -158,7 +157,6 @@ public class Game extends Canvas implements Runnable {
 	private void update() {
 
 		key.update();
-		player.update();
 		level.update();
 	}
 }

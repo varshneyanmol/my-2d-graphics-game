@@ -1,1 +1,6 @@
 1437324968903	Rename field 'testAnimation'
+1437406814731	Rename method 'renderPlayer'
+1437407839720	Rename field 'anim'
+1437409860010	Rename local variable 'xa'
+1437485016313	Rename local variable 'result'
+1437491368227	Rename local variable 'en'

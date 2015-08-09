@@ -20,15 +20,18 @@
 <fullyQualifiedTypeName name="com.rain.Game"/>
 <fullyQualifiedTypeName name="com.rain.entity.Projectiles.Projectile"/>
 <fullyQualifiedTypeName name="com.rain.entity.Projectiles.WizardProjectile"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.rain.graphics.Sprite"/>
 <fullyQualifiedTypeName name="com.rain.level.tile.Tile"/>
 <fullyQualifiedTypeName name="com.rain.graphics.Screen"/>
 <fullyQualifiedTypeName name="com.rain.level.Level"/>
 <fullyQualifiedTypeName name="com.rain.entity.Spawner"/>
 <fullyQualifiedTypeName name="com.rain.entity.Spawner.Type"/>
 <fullyQualifiedTypeName name="com.rain.entity.particle.Particle"/>
-<fullyQualifiedTypeName name="com.rain.entity.Entity"/>
 <fullyQualifiedTypeName name="com.rain.graphics.SpriteSheet"/>
+<fullyQualifiedTypeName name="com.rain.entity.mob.Mob.Direction"/>
+<fullyQualifiedTypeName name="com.rain.graphics.Sprite"/>
+<fullyQualifiedTypeName name="com.rain.entity.mob.Dummy"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.rain.entity.Entity"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="android.R"/>
 </qualifiedTypeNameHistroy>

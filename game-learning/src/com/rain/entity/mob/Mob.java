@@ -9,45 +9,85 @@ import com.rain.graphics.Sprite;
 
 public abstract class Mob extends Entity {
 
-	protected Sprite sprite;
-	protected int dir = 0;
 	protected boolean moving = false;
+	protected boolean walking = false;
 
-	public void move(int xDirection, int yDirection) { // these 'xa' and 'ya' variables will be passed three values i.e; 1,0,-1;
-		if (xDirection > 0) dir = 1; // 1 is for east direction or moving right.
-		if (xDirection < 0) dir = 3; // 3 is for west direction or moving left.
-		if (yDirection > 0) dir = 2; // 2 is for south direction or moving down.
-		if (yDirection < 0) dir = 0; // 0 is for north direction or moving up.
-
-		if (!collision(0, yDirection)) {
-			y += yDirection;
-		}
-
-		if (!collision(xDirection, 0)) {
-			x += xDirection;
-		}
+	protected enum Direction {
+		UP, DOWN, LEFT, RIGHT
 	}
 
-	public void update() {
+	protected Direction dir;
+
+	public void move(double xDirection, double yDirection) {
+		if (xDirection != 0 && yDirection != 0) {
+			move(xDirection, 0);
+			move(0, yDirection);
+			return;
+		}
+
+		if (xDirection > 0) dir = Direction.UP;
+		if (xDirection < 0) dir = Direction.LEFT;
+		if (yDirection > 0) dir = Direction.DOWN;
+		if (yDirection < 0) dir = Direction.UP;
+
+		while (xDirection != 0) {
+			if (Math.abs(xDirection) > 1) {
+				if (!collision(abs(xDirection), yDirection)) {
+					this.x += abs(xDirection);
+				}
+				xDirection -= abs(xDirection);
+			} else {
+				if (!collision(abs(xDirection), yDirection)) {
+					this.x += xDirection;
+				}
+				xDirection = 0;
+			}
+		}
+
+		while (yDirection != 0) {
+			if (Math.abs(yDirection) > 1) {
+				if (!collision(xDirection, abs(yDirection))) {
+					this.y += abs(yDirection);
+				}
+				yDirection -= abs(yDirection);
+			} else {
+				if (!collision(xDirection, abs(yDirection))) {
+					this.y += yDirection;
+				}
+				yDirection = 0;
+			}
+		}
 
 	}
 
-	protected void shoot(int x, int y, double angle) {
+	public int abs(double value) {
+		if (value < 0) return -1;
+		return 1;
+	}
+
+	public abstract void update();
+
+	public abstract void render(Screen screen);
+
+	protected void shoot(double x, double y, double angle) {
 		Projectile p = new WizardProjectile(x, y, angle);
 		level.addEntity(p);
 	}
 
-	public boolean collision(int xDirection, int yDirection) {
+	public boolean collision(double xDirection, double yDirection) {
 		boolean solid = false;
 		for (int corner = 0; corner < 4; corner++) {
-			int xt = ((x + xDirection) + corner % 2 * 16 - 10) / 16;
-			int yt = ((y + yDirection) + corner / 2 * 12 + 3) / 16;
-			if (level.getTile(xt, yt).solid()) solid = true;
+			double xt = ((x + xDirection) - corner % 2 * 16) / 16;
+			double yt = ((y + yDirection) - corner / 2 * 16) / 16;
+
+			int ix = (int) Math.ceil(xt);
+			int iy = (int) Math.ceil(yt);
+			if (corner % 2 == 0) ix = (int) Math.floor(xt);
+			if (corner / 2 == 0) iy = (int) Math.floor(yt);
+
+			if (level.getTile(ix, iy).solid()) solid = true;
 		}
 		return solid;
 	}
 
-	public void render(Screen screen) {
-
-	}
 }

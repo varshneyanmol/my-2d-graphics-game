@@ -6,7 +6,7 @@ import com.rain.graphics.Sprite;
 
 public class Projectile extends Entity {
 
-	protected int xOrigin, yOrigin;
+	protected double xOrigin, yOrigin;
 	protected double speed, range, damage;
 	protected Sprite sprite;
 	protected double distance;
@@ -14,7 +14,7 @@ public class Projectile extends Entity {
 	protected double angle;
 	protected double nx, ny;
 
-	public Projectile(int x, int y, double angle) {
+	public Projectile(double x, double y, double angle) {
 		xOrigin = x;
 		yOrigin = y;
 		this.angle = angle;

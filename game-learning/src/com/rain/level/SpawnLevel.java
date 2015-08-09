@@ -5,7 +5,8 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import com.rain.level.tile.Tile;
+import com.rain.entity.mob.Chaser;
+import com.rain.entity.mob.Dummy;
 
 public class SpawnLevel extends Level {
 
@@ -23,6 +24,10 @@ public class SpawnLevel extends Level {
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("could not load level!");
+		}
+		addEntity(new Chaser(40, 40));
+		for (int i = 0; i < 5; i++) {
+			addEntity(new Dummy(25, 30));
 		}
 	}
 

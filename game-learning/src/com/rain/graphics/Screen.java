@@ -3,6 +3,8 @@ package com.rain.graphics;
 import java.util.Random;
 
 import com.rain.entity.Projectiles.Projectile;
+import com.rain.entity.mob.Chaser;
+import com.rain.entity.mob.Mob;
 import com.rain.level.tile.Tile;
 
 public class Screen {
@@ -57,7 +59,6 @@ public class Screen {
 		}
 	}
 
-	
 	public void renderSprite(int xp, int yp, Sprite sprite, boolean fixed) {
 		if (fixed) {
 			xp -= xOffset;
@@ -103,7 +104,29 @@ public class Screen {
 		}
 	}
 
-	public void renderPlayer(int xp, int yp, Sprite sprite, int flip) {
+	public void renderMob(int xp, int yp, Mob mob) {
+		xp -= xOffset;
+		yp -= yOffset;
+		for (int y = 0; y < 32; y++) {
+			int ya = y + yp;
+			int ys = y;
+			for (int x = 0; x < 32; x++) {
+				int xa = x + xp;
+				int xs = x;
+				if (xa < -32 || xa >= width || ya < 0 || ya >= height) break;
+				if (xa < 0) xa = 0;
+				int col = mob.getSprite().pixels[xs + ys * 32];
+
+				if (mob instanceof Chaser) {
+					if (col == 0xff472BBF) col = 0xff000000;
+					if (col == 0xffFEFF60) col = 0xffD90022;
+				}
+				if (col != 0xffff00ff) pixels[xa + ya * width] = col;
+			}
+		}
+	}
+
+	public void renderMob(int xp, int yp, Sprite sprite, int flip) {
 		xp -= xOffset;
 		yp -= yOffset;
 		for (int y = 0; y < 32; y++) {

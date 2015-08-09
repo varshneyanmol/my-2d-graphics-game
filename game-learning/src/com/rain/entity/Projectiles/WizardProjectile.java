@@ -10,7 +10,7 @@ public class WizardProjectile extends Projectile {
 	public static final int FIRE_RATE = 4; // think of this number as the time interval in between two projectiles. So, the higher the fire
 											// rate, the slower player is going to fire them.
 
-	public WizardProjectile(int x, int y, double angle) {
+	public WizardProjectile(double x, double y, double angle) {
 		super(x, y, angle);
 		range = 150;
 		sprite = Sprite.wizard_projectile;

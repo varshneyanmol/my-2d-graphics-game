@@ -1,16 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=game-learning/src&lt;com.rain.level.tile{GrassTile.java[GrassTile" modifiers="1" timestamp="1436815563740"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.level.tile{Tile.java[Tile" modifiers="1" timestamp="1437029712644"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.entity.Projectiles{Projectile.java[Projectile" modifiers="1" timestamp="1437112303161"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.entity.Projectiles{WizardProjectile.java[WizardProjectile" modifiers="1" timestamp="1437304853939"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.graphics{Sprite.java[Sprite" modifiers="1" timestamp="1437298959054"/>
-<typeInfo handle="=game-learning/src&lt;com.rain{Main.java[Main" modifiers="1" timestamp="1436709507542"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.entity{Entity.java[Entity" modifiers="1025" timestamp="1437039152776"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.graphics{SpriteSheet.java[SpriteSheet" modifiers="1" timestamp="1437297874107"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.entity.mob{Mob.java[Mob" modifiers="1025" timestamp="1437233441058"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.level{Level.java[Level" modifiers="1" timestamp="1437304853955"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.entity.mob{Player.java[Player" modifiers="1" timestamp="1437137011891"/>
-<typeInfo handle="=game-learning/src&lt;com.rain.graphics{Screen.java[Screen" modifiers="1" timestamp="1437297983597"/>
-<typeInfo handle="=game-learning/src&lt;com.rain{Game.java[Game" modifiers="1" timestamp="1437304939567"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
